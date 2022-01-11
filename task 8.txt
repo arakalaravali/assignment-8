@@ -118,27 +118,53 @@ script.js:129 Eon Productions
 script.js:130 PG­13
 
 2)https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
-CODE/ANS:-
-class circle{
-    setter(radius,color){
-        this.radius=1.0;
-        this.color="red";
+CODE/ANS:-class Circle {
+    constructor(radius, color) {
+      this.radius = radius
+      this.color = color
     }
-    getter()
-    {
-         return`
-        ${this.radius}
-        ${this.color}`;
+    getRadius () {
+      return this.radius
     }
-}
-    let circle1=new circle();
-    circle1.setter("1.0","red");
-    console.log(circle1.getter());
+    setRadius (radius) {
+      this.radius = radius
+    }
+    getColor () {
+      return this.color
+    }
+    setColor (color) {
+      this.color = color
+    }
+    getArea () {
+      return Math.PI * this.radius * this.radius
+    }
+    getCircumference () {
+      return 2 * Math.PI * this.radius;
+    }
+   }
+  
+   let myCircle = new Circle (1, 'RED',)
+   console.log(myCircle.getRadius())
+   console.log(myCircle.getColor())
+   console.log(myCircle.getArea())
+   console.log(myCircle.getCircumference())
+  
+   myCircle.setColor('Blue')
+   myCircle.setRadius(2)
+   console.log(myCircle.getRadius())
+   console.log(myCircle.getColor())
+   console.log(myCircle.getArea())
+   console.log(myCircle.getCircumference())
 
-OUTPUT:-
-        1
-        red
-sccript.js:81 
+
+OUTPUT:-script.js:158 1
+script.js:159 RED
+script.js:160 3.141592653589793
+script.js:161 6.283185307179586
+script.js:166 2
+script.js:167 Blue
+script.js:168 12.566370614359172
+script.js:169 12.566370614359172
 
 3)Write a “person” class to hold all the details.
 CODE/ANS:-
