@@ -1,0 +1,204 @@
+task-8
+1)https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+CODE/ANS:-
+class movie{
+    constructor(title,studio,rating){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+     static getpg(){
+        var data=`
+        title:${this.title};
+        studio:${this.studio};
+        rating:${this.rating};
+        `}
+    data;
+    
+}
+
+let movie1=new movie("lift","annapurna","imdb-7");
+
+console.log(movie1.title);
+console.log(movie1.studio);
+console.log(movie1.rating);
+
+OUTPUT:-
+sccript.js:19 lift
+sccript.js:20 annapurna
+sccript.js:21 imdb-7
+
+1)b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+CODE/ANS:-
+ class movie{
+            constructor(title,studio,rating="10"){
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating;
+            }
+              getpg(){
+                var data=`
+                title:${this.title};
+                studio:${this.studio};
+                rating:${this.rating};
+                `}
+            data;
+            }
+        
+        const movie1=new movie("lift","annapurna",);
+        const movie2=new movie("bahubali","annapurna",);
+        
+        console.log(movie1.title);
+        console.log(movie1.studio);
+        console.log(movie1.rating);
+        console.log(movie2.rating);
+output:-
+script.js:41 lift
+script.js:42 annapurna
+script.js:43 10
+script.js:44 10
+
+1)c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+
+CODE/ANS:-
+class movie{
+    constructor(title,studio,rating='pg'){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+      getpg(arr){
+          let result=[]
+          arr.filter(movie=>{
+              if(movie.rating==='pg'){
+                  result.push(movie)
+              }
+            })
+            return result
+        }
+    }
+        const movie1=new movie('casino roale','Eon Productions','pg')
+        const movie2=new movie('doctor','test','pg')
+        const movie3=new movie('kathi','gen','pg13')
+        let arr=[movie1,movie2,movie3]
+        console.log(movie1.getpg(arr))
+
+OUTPUT:-
+script.js:21 (2) [movie, movie]
+0: movie {title: 'casino roale', studio: 'Eon Productions', rating: 'pg'}
+1: movie {title: 'doctor', studio: 'test', rating: 'pg'}
+length: 2[[Prototype]]: Array(0)
+
+1)d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+code/ans:-
+class movie{
+    constructor(title,studio,rating){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating;
+    }
+      getpg(){
+        var data=`
+        title:${this.title};
+        studio:${this.studio};
+        rating:${this.rating};
+        `}
+    data;
+    }
+
+const movie1=new movie("Casino Royale","Eon Productions","PG­13");
+
+console.log(movie1.title);
+console.log(movie1.studio);
+console.log(movie1.rating);
+
+OUTPUT:-
+script.js:128 Casino Royale
+script.js:129 Eon Productions
+script.js:130 PG­13
+
+2)https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+CODE/ANS:-
+class circle{
+    setter(radius,color){
+        this.radius=1.0;
+        this.color="red";
+    }
+    getter()
+    {
+         return`
+        ${this.radius}
+        ${this.color}`;
+    }
+}
+    let circle1=new circle();
+    circle1.setter("1.0","red");
+    console.log(circle1.getter());
+
+OUTPUT:-
+        1
+        red
+sccript.js:81 
+
+3)Write a “person” class to hold all the details.
+CODE/ANS:-
+var person={
+    name:"rithik",
+    age:"25",
+    height:4.5,
+    color:"black",
+    designation:"senior developer",
+        city:"secunderabad",
+        state:"telangana",
+    
+}
+console.log(person.name);
+console.log(person['age']);
+
+for(props in person){
+    console.log( person[props]);
+}
+
+OUTPUT:-
+sccript.js:93 rithik
+sccript.js:94 25
+sccript.js:97 rithik
+sccript.js:97 25
+sccript.js:97 4.5
+sccript.js:97 black
+sccript.js:97 senior developer
+sccript.js:97 secunderabad
+sccript.js:97 telangana
+
+4)write a class to calculate uber price.
+CODE/ANS:-
+
+var uber=[
+    {
+    type:"car",
+    model:"inova",
+    color:"black",
+    loading :6,
+    engine:"automation",
+    width:2,
+    height:2,
+    rate:1000,
+},
+{
+    type:"car",
+    model:"nissan",
+    color:"white",
+    loading :6,
+    engine:"v8",
+    width:2,
+    height:2,
+    rate:1500,
+},
+
+];
+let totalrate=uber.reduce((acc,curr) =>
+    acc+curr.rate,0);
+console.log(totalrate);
+
+OUTPUT:-
+2500 script.js:193
